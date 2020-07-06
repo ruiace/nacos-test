@@ -1,12 +1,11 @@
-#server:
-#  port: 8080
+server:
+  port: 8083
 
 spring:
   application:
-    name: nacos-provider
-
+    name: service2-application
   cloud:
     nacos:
       discovery:
-        server-addr: 101.200.133.224:80
+        server-addr: 101.200.133.224:8848
         namespace: 517de881-6364-4f3c-b102-3b60b9498cc2

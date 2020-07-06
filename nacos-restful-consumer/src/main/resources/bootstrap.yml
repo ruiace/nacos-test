@@ -1,0 +1,37 @@
+server:
+  port: 8081
+
+
+provider:
+  address: http://localhost:8080
+spring:
+  application:
+    name: nacos-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 101.200.133.224:8848
+        namespace: 517de881-6364-4f3c-b102-3b60b9498cc2
+      config:
+        encode: UTF-8
+        namespace: 517de881-6364-4f3c-b102-3b60b9498cc2
+        group: DEFAULT_GROUP
+        server-addr: 101.200.133.224:8848
+        file-extension: yaml
+        ext-config:
+          -
+            data-id: ext-config01.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+          -
+            data-id: ext-config.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+
+
+
+
+
+nacos-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

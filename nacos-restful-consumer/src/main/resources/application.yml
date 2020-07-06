@@ -1,5 +1,0 @@
-server:
-  port: 8081
-
-provider:
-  address: http://localhost:8080
